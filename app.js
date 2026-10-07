@@ -1,15 +1,3 @@
-const tg = window.Telegram.WebApp;
-
-tg.ready();
-tg.expand();
-
-const user = tg.initDataUnsafe?.user;
-
-if (user) {
-    document.getElementById("userName").textContent =
-        `Salom, ${user.first_name}!`;
-}
-
 let mining = false;
 let seconds = 24 * 60 * 60;
 
@@ -20,26 +8,29 @@ const button = document.getElementById("startMining");
 function updateTimer() {
 
     const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
+
+    const minutes =
+        Math.floor((seconds % 3600) / 60);
+
     const secs = seconds % 60;
 
     timer.textContent =
-        `${String(hours).padStart(2, "0")}:` +
-        `${String(minutes).padStart(2, "0")}:` +
-        `${String(secs).padStart(2, "0")}`;
+        String(hours).padStart(2, "0") + ":" +
+        String(minutes).padStart(2, "0") + ":" +
+        String(secs).padStart(2, "0");
 }
 
-button.addEventListener("click", () => {
+button.addEventListener("click", function () {
 
     if (mining) return;
 
     mining = true;
 
-    status.textContent = "🟢 Mining faol";
-    button.textContent = "⛏ MINING ISHLAMOQDA";
+    status.textContent = "🟢 Mining is active";
+    button.textContent = "⛏ MINING...";
     button.disabled = true;
 
-    const interval = setInterval(() => {
+    const interval = setInterval(function () {
 
         seconds--;
 
@@ -51,10 +42,12 @@ button.addEventListener("click", () => {
 
             mining = false;
 
-            status.textContent = "🔴 Mining tugadi";
+            status.textContent = "🔴 Mining finished";
 
-            button.textContent = "▶️ START MINING";
+            button.textContent = "▶ START MINING";
             button.disabled = false;
+
+            alert("🎉 Mining finished!\n\nReward: 0.2000 TON");
 
             seconds = 24 * 60 * 60;
 
