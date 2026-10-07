@@ -2,75 +2,119 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>TON Mining</title>
-
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="app">
+<div class="app">
 
-        <header>
+    <header class="header">
+        <div>
             <h1>⛏ TON Mining</h1>
-            <p id="userName">Salom!</p>
-        </header>
-
-        <section class="balance-card">
-            <p>💰 Balans</p>
-            <h2 id="balance">0.0000 TON</h2>
-        </section>
-
-        <section class="mining-card">
-
-            <div class="mining-icon">⛏️</div>
-
-            <h2>Mining</h2>
-
-            <p id="miningStatus">
-                Mining faol emas
-            </p>
-
-            <p id="timer">
-                24:00:00
-            </p>
-
-            <button id="startMining">
-                ▶️ START MINING
-            </button>
-
-        </section>
-
-        <div class="menu">
-
-            <button>🎁 Kunlik bonus</button>
-
-            <button>👥 Referal</button>
-
-            <button>📋 Vazifalar</button>
-
-            <button>💎 TON Wallet</button>
-
-            <button>🚀 Boost</button>
-
-            <button>👑 VIP</button>
-
-            <button>🛒 Do‘kon</button>
-
-            <button>🧮 Kalkulyator</button>
-
+            <p>Welcome to your mining dashboard</p>
         </div>
 
-    </div>
+        <button class="profile-btn">👤</button>
+    </header>
 
-    <script src="app.js"></script>
+    <section class="balance-card">
+        <span>💰 Your Balance</span>
+        <h2 id="balance">0.0000 TON</h2>
+        <p>Mining reward balance</p>
+    </section>
+
+    <section class="mining-card">
+
+        <div class="mining-circle">
+            ⛏️
+        </div>
+
+        <h2>Mining</h2>
+
+        <p id="miningStatus">
+            Mining is not active
+        </p>
+
+        <div id="timer">
+            24:00:00
+        </div>
+
+        <div class="reward">
+            +0.2000 TON / 24h
+        </div>
+
+        <button id="startMining" class="main-button">
+            ▶ START MINING
+        </button>
+
+    </section>
+
+    <h3 class="section-title">Services</h3>
+
+    <section class="menu">
+
+        <button>
+            <span>🎁</span>
+            <b>Daily Bonus</b>
+            <small>Get daily reward</small>
+        </button>
+
+        <button>
+            <span>👥</span>
+            <b>Referral</b>
+            <small>Invite friends</small>
+        </button>
+
+        <button>
+            <span>📋</span>
+            <b>Tasks</b>
+            <small>Complete tasks</small>
+        </button>
+
+        <button>
+            <span>💎</span>
+            <b>TON Wallet</b>
+            <small>Connect wallet</small>
+        </button>
+
+        <button>
+            <span>🚀</span>
+            <b>Boost</b>
+            <small>Increase mining</small>
+        </button>
+
+        <button>
+            <span>👑</span>
+            <b>VIP</b>
+            <small>VIP benefits</small>
+        </button>
+
+        <button>
+            <span>🛒</span>
+            <b>Shop</b>
+            <small>Buy packages</small>
+        </button>
+
+        <button>
+            <span>🧮</span>
+            <b>Calculator</b>
+            <small>Calculate rewards</small>
+        </button>
+
+    </section>
+
+    <footer>
+        <p>TON Mining © 2026</p>
+    </footer>
+
+</div>
+
+<script src="app.js"></script>
 
 </body>
-  </html>
+    </html>
