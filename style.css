@@ -5,74 +5,178 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f4f7;
-    color: #222;
+    background: #eef3f8;
+    color: #17202a;
 }
 
 .app {
-    max-width: 500px;
+    width: 100%;
+    max-width: 520px;
     margin: auto;
-    padding: 20px;
+    padding: 18px;
 }
 
-header {
-    text-align: center;
+/* Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
-header h1 {
-    margin-bottom: 5px;
+.header h1 {
+    margin: 0;
+    font-size: 25px;
 }
 
-header p {
-    color: #777;
+.header p {
+    margin: 6px 0 0;
+    color: #7b8794;
+    font-size: 13px;
 }
 
-.balance-card,
-.mining-card {
+.profile-btn {
+    width: 45px;
+    height: 45px;
+    border: 0;
+    border-radius: 50%;
     background: white;
-    border-radius: 20px;
-    padding: 22px;
-    margin-bottom: 16px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    font-size: 21px;
+}
+
+/* Balance */
+
+.balance-card {
+    padding: 23px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #0088cc, #0077b6);
+    color: white;
+    box-shadow: 0 10px 25px rgba(0, 120, 180, 0.20);
+    margin-bottom: 18px;
+}
+
+.balance-card span {
+    font-size: 14px;
+    opacity: .9;
 }
 
 .balance-card h2 {
-    font-size: 30px;
-    margin: 10px 0;
+    margin: 10px 0 5px;
+    font-size: 34px;
 }
 
-.mining-icon {
-    font-size: 45px;
+.balance-card p {
+    margin: 0;
+    opacity: .8;
+    font-size: 13px;
+}
+
+/* Mining */
+
+.mining-card {
+    background: white;
+    border-radius: 24px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+}
+
+.mining-circle {
+    width: 75px;
+    height: 75px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9f6ff;
+    font-size: 35px;
+}
+
+.mining-card h2 {
+    margin: 13px 0 5px;
+}
+
+#miningStatus {
+    color: #7b8794;
+    margin: 0;
 }
 
 #timer {
-    font-size: 28px;
+    margin: 20px 0 8px;
+    font-size: 35px;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
-#startMining {
+.reward {
+    color: #0088cc;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.main-button {
     width: 100%;
+    border: 0;
+    border-radius: 15px;
     padding: 16px;
-    border: none;
-    border-radius: 14px;
     background: #0088cc;
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.main-button:disabled {
+    opacity: .6;
+}
+
+/* Services */
+
+.section-title {
+    margin: 24px 3px 12px;
 }
 
 .menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 11px;
 }
 
 .menu button {
-    padding: 17px 8px;
-    border: none;
-    border-radius: 14px;
+    min-height: 105px;
+    border: 0;
+    border-radius: 18px;
     background: white;
+    text-align: left;
+    padding: 15px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.05);
+    cursor: pointer;
+}
+
+.menu span {
+    display: block;
+    font-size: 27px;
+    margin-bottom: 7px;
+}
+
+.menu b {
+    display: block;
     font-size: 15px;
-  }
+}
+
+.menu small {
+    display: block;
+    color: #8a96a3;
+    margin-top: 4px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px 0 10px;
+    color: #9aa5b1;
+    font-size: 12px;
+    }
